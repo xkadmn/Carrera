@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="tablero.component.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="TITULO"> Tablero</div>
+    <button (click)="comenzarCarrera()">Comenzar Carrera</button>
+    <div class="tiempo">Tiempo: {{ tiempo }}</div> <!-- Nuevo -->
+    <div class="tablero">
+        <app-jugador1></app-jugador1>
+        <app-maquina></app-maquina>
+    </div>
+    <!-- Mostrar el nombre del ganador -->
+<div *ngIf="carreraTerminada">Ganador: {{ ganador }}</div>
+</body>
+</html>
