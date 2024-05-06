@@ -10,6 +10,7 @@ export class TableroComponent implements OnInit {
   tiempo: number = 0;
   carreraTerminada: boolean = false;
   ganador: string = ''; // Variable para almacenar el nombre del jugador ganador
+  carreraComenzada: boolean = false; // Declara la propiedad carreraComenzada aquí
 
   constructor(private carreraService: CarreraService) { }
 
@@ -19,6 +20,7 @@ export class TableroComponent implements OnInit {
   comenzarCarrera() {
     console.log('Carrera comenzada!');
     this.carreraService.setCarreraComenzada(true); // Establecer carreraComenzada en true
+    this.carreraComenzada = true; // Actualizar carreraComenzada en el componente
     this.iniciarContador();
     this.iniciarCarrera();
   }

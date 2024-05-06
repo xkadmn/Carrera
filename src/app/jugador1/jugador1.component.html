@@ -1,6 +1,19 @@
-<img src="https://i.gifer.com/T2xO.gif" style=" width: 50px; height: 50px;">
-<p>Nafta: {{ jugador1Nafta }}</p>
-<p>Distancia recorrida: {{ jugador1Distancia }}</p>
-<button (click)="cargarNaftaJugador1()">Cargar Nafta</button>
-<button (click)="acelerarJugador1()">Acelerar</button>
-
+<div class="jugador jugador" style="width: 100%; display: flex; align-items: center; flex-direction: row-reverse;">
+    <div style="display: flex; flex-direction: column;">
+        <p style="margin: 0;">Nafta: {{ jugador1Nafta }}</p>
+        <p style="margin: 0;">Distancia recorrida: {{ jugador1Distancia }}</p>
+        <div style="display: flex;">
+            <button (click)="cargarNaftaJugador1()"><img src="https://i.gifer.com/8BH.gif" style=" height:50px; width: 50px;"/></button>
+            <button (click)="acelerarJugador1()" id="pedalJugador1"><img src="https://i.gifer.com/77Qe.gif" style=" height:50px; width: 50px;"/></button> 
+        </div>
+    </div>
+    <img [src]="imagenJugador1" 
+    style=" 
+    height: 150px; 
+    width: 160px;
+    margin-right: 3%;
+    border-right: 5px solid rgb(130, 130, 106);
+    border-top: 5px solid rgb(130, 130, 106);
+    border-left: 5px solid rgb(12, 12, 11);
+    border-bottom: 5px solid rgb(12, 12, 11);">
+</div>

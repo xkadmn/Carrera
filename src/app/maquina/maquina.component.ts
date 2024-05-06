@@ -1,5 +1,5 @@
 
-import { Component, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { CarreraService } from '../carrera.service';
 
 @Component({
@@ -7,15 +7,10 @@ import { CarreraService } from '../carrera.service';
   templateUrl: './maquina.component.html',
   styleUrls: ['./maquina.component.css']
 })
-export class MaquinaComponent implements OnInit {
-  carreraComenzada: boolean = false; // Variable para indicar si la carrera ha comenzado
-  constructor(private carreraService: CarreraService) { }
-  
-  ngOnInit(): void {
-    // Obtener el estado de carreraComenzada al inicializar el componente
-    this.carreraComenzada = this.carreraService.getCarreraComenzada();
-  }
+export class MaquinaComponent {
+  @Input() carreraComenzada: boolean = false;
 
+  constructor(private carreraService: CarreraService) { }
 
   get nafta() {
     return this.carreraService.nafta;
@@ -24,14 +19,12 @@ export class MaquinaComponent implements OnInit {
   get distancia() {
     return this.carreraService.distancia;
   }
-  
-  comenzarCarrera() {
-    this.carreraService.setCarreraComenzada(true); // Establecer carreraComenzada en true
-    this.carreraComenzada = true; // Actualizar el estado local de carreraComenzada
+
+  get imagenMaquina(): string {
+    return this.carreraComenzada ? 'https://i.gifer.com/ZJFD.gif' : 'https://i.gifer.com/Pw0b.gif';
   }
 
   cargarNafta() {
     this.carreraService.cargarNafta();
   }
-
 }

@@ -50,10 +50,10 @@ export class CarreraService {
       // Descuenta la nafta del jugador1
       this.jugador1Nafta -= this.jugador1Distancia / 6;
   
-      // Verifica si la nafta del jugador1 llega a 0 y lo descalifica si es así
+      // Verifica si la nafta del jugador1 llega a 0s
       if (this.jugador1Nafta < 1) {
         this.jugador1Nafta = 0; // Establece la nafta del jugador1 en 0
-        // Aquí puedes emitir un evento o tomar otras acciones necesarias
+        //
       }
   
       // Verifica si el jugador1 llega a la meta y termina la carrera si es así
@@ -64,8 +64,7 @@ export class CarreraService {
   }
   avanzarMaquina() {
     if (!this.carreraTerminada && this.nafta === 50) {
-      // Lógica para avanzar la máquina
-      // Aquí también puedes verificar si la distancia de la máquina llega a 200 y establecer carreraTerminada en true si es así.
+      // 
     }
   }
 }
