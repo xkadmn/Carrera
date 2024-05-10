@@ -1,0 +1,19 @@
+
+.info-container {
+    width: 100%; 
+    margin-right: 10px;
+    background-color:blue;
+    
+  }
+  .jugador-user{
+    width: 100%; 
+    border: 1px solid black;
+    background-image: url('https://i.gifer.com/3Xn3.gif');
+    /* Ajusta otras propiedades según sea necesario */
+    background-size: cover; /* Para ajustar el tamaño de la imagen al contenedor */
+    background-repeat: no-repeat; /* Para evitar que la imagen se repita */
+  }
+
+  img{
+    height: 150px; width: 160px; 
+  }

@@ -32,6 +32,7 @@ export class CarreraService {
   avanzarCarrera() {
     if (!this.carreraTerminada && this.nafta > 1) {
       this.distancia += Math.floor(Math.random() * 9) + 1;
+     
       this.nafta -= this.distancia / 6;
 
       if (this.nafta < 1) {
@@ -63,8 +64,17 @@ export class CarreraService {
     }
   }
   avanzarMaquina() {
-    if (!this.carreraTerminada && this.nafta === 50) {
-      // 
+    if (!this.carreraTerminada && this.nafta > 0) {
+      this.distancia += Math.floor(Math.random() * 9) + 1;
+      this.nafta -= this.distancia / 6;
+  
+      if (this.nafta < 1) {
+        this.cargarNafta();
+      }
+  
+      if ((this.distancia / 200) >= 0.9) {
+        this.carreraTerminada = true;
+      }
     }
   }
 }

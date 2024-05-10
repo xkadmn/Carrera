@@ -15,12 +15,14 @@ export class TableroComponent implements OnInit {
   constructor(private carreraService: CarreraService) { }
 
   ngOnInit(): void {
+    
   }
 
   comenzarCarrera() {
     console.log('Carrera comenzada!');
     this.carreraService.setCarreraComenzada(true); // Establecer carreraComenzada en true
     this.carreraComenzada = true; // Actualizar carreraComenzada en el componente
+    console.log('Carrera comenzada: ', this.carreraComenzada);
     this.iniciarContador();
     this.iniciarCarrera();
   }

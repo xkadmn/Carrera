@@ -15,7 +15,7 @@
             Tiempo:  {{ tiempo }} seg
         </div>
     </div>
-    <div class="tablero d-flex flex-column "> <!-- Cambio aquí -->
+    <div class="tablero"> <!--  d-flex flex-column Cambio aquí -->
         <div class="jugador jugador1"> <!-- Agregado la clase mb-4 para un espacio entre los jugadores -->
             <app-jugador1 [carreraComenzada]="carreraComenzada"></app-jugador1>
         </div>
@@ -23,6 +23,7 @@
             <app-maquina [carreraComenzada]="carreraComenzada"></app-maquina>
         </div>
     </div>
+    
     <!-- Mostrar el nombre del ganador -->
     <div *ngIf="carreraTerminada">Ganador: {{ ganador }}</div>
 </body>
